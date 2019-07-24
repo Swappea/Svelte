@@ -2,7 +2,8 @@
   // import Reactivity from './Reactivity.svelte';
   // import Props from "./Props.svelte";
   // import Logic from "./Logic.svelte";
-  import Events from "./Events.svelte";
+  // import Events from "./Events.svelte";
+  import Bindings from "./Bindings.svelte";
   export let title = "Svelte Tutorial!";
   //   const propsInfo = {
   // 	  name: 'Props',
@@ -26,4 +27,5 @@
 <!-- <Props {...propsInfo} />
 <Props /> -->
 <!-- <Logic /> -->
-<Events on:messages={handleMessage} on:message={handleMessage}/>
+<!-- <Events on:messages={handleMessage} on:message={handleMessage}/> -->
+<Bindings />
