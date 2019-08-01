@@ -5,28 +5,31 @@
   // import Events from "./Events.svelte";
   // import Bindings from "./Bindings.svelte";
   // import Lifecycle from "./Lifecycle.svelte";
+  import Tweened from "./Tweened.svelte";
+  import Spring from "./Spring.svelte";
+
   export let title = "Svelte Tutorial!";
 
-  import { count, name, greeting } from "./stores.js";
+  // import { count, name, greeting } from "./stores.js";
   // import Incrementer from "./Incrementer.svelte";
   // import Decrementer from "./Decrementer.svelte";
-  import Timer from "./Timer.svelte";
+  // import Timer from "./Timer.svelte";
   //   const propsInfo = {
   // 	  name: 'Props',
   // 	  answer: 42
   //   }
 
-  function handleMessage(event) {
-    alert(event.detail.text);
-  }
+  // function handleMessage(event) {
+  //   alert(event.detail.text);
+  // }
 
-  import { onMount, onDestroy } from "svelte";
-  let showLifecycleComp = true;
-  onMount(() => {
-    setTimeout(() => {
-      showLifecycleComp = false;
-    }, 10000);
-  });
+  // import { onMount, onDestroy } from "svelte";
+  // let showLifecycleComp = true;
+  // onMount(() => {
+  //   setTimeout(() => {
+  //     showLifecycleComp = false;
+  //   }, 10000);
+  // });
 
   // let count_value;
 
@@ -60,7 +63,7 @@
 
 <Incrementer />
 <Decrementer /> -->
-<Timer />
+<!-- <Timer />
 
 <h1>The count is {$count}</h1>
 
@@ -73,4 +76,7 @@
 
 <button on:click="{() => $name += '!'}">
 	Add exclamation mark!
-</button>
+</button> -->
+
+<Tweened />
+<Spring />
