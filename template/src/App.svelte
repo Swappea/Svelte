@@ -3,7 +3,8 @@
   // import Props from "./Props.svelte";
   // import Logic from "./Logic.svelte";
   // import Events from "./Events.svelte";
-  import Bindings from "./Bindings.svelte";
+  // import Bindings from "./Bindings.svelte";
+  import Lifecycle from "./Lifecycle.svelte";
   export let title = "Svelte Tutorial!";
   //   const propsInfo = {
   // 	  name: 'Props',
@@ -13,6 +14,14 @@
   function handleMessage(event) {
     alert(event.detail.text);
   }
+
+  import { onMount, onDestroy } from "svelte";
+  let showLifecycleComp = true;
+  onMount(() => {
+    setTimeout(() => {
+      showLifecycleComp = false;
+    }, 10000);
+  });
 </script>
 
 <style>
@@ -28,4 +37,7 @@
 <Props /> -->
 <!-- <Logic /> -->
 <!-- <Events on:messages={handleMessage} on:message={handleMessage}/> -->
-<Bindings />
+<!-- <Bindings /> -->
+{#if showLifecycleComp}
+  <Lifecycle />
+{/if}
